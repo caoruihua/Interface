@@ -5,7 +5,8 @@ from Public.log import LOG,logger
 @logger('requests封装')
 class requ():
     def __init__(self):
-        self.headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:51.0) Gecko/20100101 Firefox/51.0"}
+        self.headers = {"User-Agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:51.0) Gecko/20100101 Firefox/51.0",
+                        "Authorization": "Bearer cf8d86e3-4ae9-4800-a937-714781106643"}
     def get(self, url,params):#get消息
         try:
             r = requests.get(url, params=params,headers=self.headers)
